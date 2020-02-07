@@ -1,0 +1,132 @@
+<style>
+body {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+.tab_bg_1 {
+	text-align:center;
+	color:#000000;
+	background-color: #ECECEC;
+	font-weight: bold;
+}
+table {
+	margin: 0 auto;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	z-index:1;
+	text-align: left;
+	font-size: 13px;
+	border-collapse: collapse;
+	background-color: #ffffff;
+	font-family: Helvetica,Arial,sans-serif;
+}
+th {
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #e1cc7b;
+	text-align: center;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-o-border-radius: 4px;
+	padding: 2px;
+	border-bottom:1px solid #cccccc;
+	padding: 2px;
+}
+td{
+	padding-left: 2px;
+	padding-top: 2px;
+}
+</style>
+<center style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #dbdbdb;" width="640">
+   	    <tbody>
+		<tr style="color:#FFFFFF; background-color: #28608F">
+		    <td align="left" valign="top" style="text-align:center; padding: 5px">
+				<p>INSTITUTO FEDERAL DE EDUCA&Ccedil;&Atilde;O, CI&Ecirc;NCIA E TECNOLOGIA DO CEAR&Aacute;
+				<p>DIRETORIA DE GEST&Atilde;O DE TECNOLOGIA DA INFORMA&Ccedil;&Atilde;O - DGTI
+				<p>COORDENA&Ccedil;&Atilde;O DE INFRAESTRUTURA E REDES - COIR			
+			</td>
+     	</tr>
+		<tr class="tab_bg_1">
+		    <td align="left" valign="middle" style="text-align:center; padding: 5px">
+			    DADOS DO CHAMADO
+			</td>
+     	</tr>
+		<tr>
+			<td align="left" valign="middle" style="text-align:center; padding: 5px">
+				<table cellspacing="0" cellpadding="0" width="640">
+					<tr>
+                		<td align="left" valign="middle" style="text-align:center; padding: 5px"><b>Chamado N&deg;:</b></td>
+                      	<td align="left" valign="middle" style="text-align:center; padding: 5px">
+							##ticket.id##
+						</td>
+                    </tr>
+                    <tr>
+                    	<td align="left" valign="middle" style="text-align:center; padding: 5px"><strong>Data de abertura:</strong></td>
+                      	<td align="left" valign="middle" style="text-align:center; padding: 5px">
+							##ticket.creationdate##
+						</td>
+                    </tr>
+                    <tr>
+                      	<td align="left" valign="middle" style="text-align:center; padding: 5px"><b>Origem do chamado</b>:</td>
+                      	<td align="left" valign="middle" style="text-align:center; padding: 5px">
+							##ticket.requesttype##
+						</td>
+                    </tr>
+                    <tr>
+                      	<td align="left" valign="middle" style="text-align:center; padding: 5px"><strong>Categoria:</strong></td>
+						<td align="left" valign="middle" style="text-align:center; padding: 5px">
+						  	##IFticket.category####ticket.category####ENDIFticket.category##
+							##ELSEticket.category##Categoria não informada##ENDELSEticket.category##
+						</td>
+                    </tr>
+                    <tr>
+                    	<td align="left" valign="middle" style="text-align:center; padding: 5px"><b>Status do chamado</b>:</td>
+                      	<td align="left" valign="middle" style="text-align:center; padding: 5px">
+							##ticket.status##
+						</td>
+                    </tr>
+			  </table>
+		  </td>
+		</tr>
+		<tr class="tab_bg_1">
+		    <td align="left" valign="middle" style="text-align:center; padding: 5px">
+			    SOLICITANTE
+			</td>
+     	</tr>
+		<tr>
+			<td align="left" valign="middle" style="text-align:center; padding: 5px">
+				##IFticket.authors## 
+ 				##ticket.authors## 
+ 				##ENDIFticket.authors## 
+ 				##ELSEticket.authors##
+				---
+				##ENDELSEticket.authors##
+			</td>
+		</tr>
+		<tr class="tab_bg_1">
+		    <td align="left" valign="middle" style="text-align:center; padding: 5px">
+			    ASSUNTO
+			</td>
+     	</tr>
+		<tr>
+			<td align="left" valign="middle" style="text-align:center; padding: 5px">
+				##ticket.title##
+			</td>
+		</tr>
+		<tr class="tab_bg_1">
+		    <td align="left" valign="middle" style="text-align:center; padding: 5px">
+			    DESCRIÇÃO
+			</td>
+     	</tr>
+		<tr>
+			<td align="left" valign="middle" style="text-align:center; padding: 5px">
+				##ticket.content##
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</center>
